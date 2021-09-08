@@ -472,39 +472,43 @@ input {
   transform: var(--img-scale);
 }
 
-/*=============== DISCOVER ===============*/
-.discover__card {
+/*=============== testimonials ===============*/
+.testimonials__card {
   position: relative;
-  width: 200px;
+  width: 95%;
   overflow: var(--img-hidden);
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 1.5rem;
+  height: 300px;
 }
 
-.discover__data {
+.testimonials__data {
   position: absolute;
   bottom: 1.5rem;
   left: 1rem;
 }
 
-.discover__title, 
-.discover__description {
-  color: var(--white-color);
+.testimonials__title, 
+.testimonials__description {
+  color: var(--first-color);
 }
 
-.discover__title {
+.testimonials__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-25);
 }
 
-.discover__description {
+.testimonials__description {
   display: block;
   font-size: var(--smaller-font-size);
 }
 
-.discover__img {
+.testimonials__img {
   transition: var(--img-transition);
 }
 
-.discover__img:hover {
+.testimonials__img:hover {
   transform: var(--img-scale);
 }
 
@@ -671,6 +675,7 @@ input {
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
   background-color: var(--first-color-second);
+  height: 500px;
   padding: 2.5rem 0;
 }
 
@@ -893,7 +898,7 @@ input {
   }
   .nav__list {
     flex-direction: row;
-    column-gap: 4rem;
+    column-gap: 2rem;
   }
   .nav__toggle, .nav__close {
     display: none;
@@ -951,12 +956,13 @@ input {
   .about__description {
     margin-bottom: var(--mb-2);
   }
-  .discover__container {
+  .testimonials__container {
     width: 610px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0.5rem;
   }
-  .discover__container,
+  .testimonials__container,
   .place__container {
     padding-top: 2rem;
   }
@@ -1010,17 +1016,18 @@ input {
   .about__img-two {
     width: 290px;
   }
-  .discover__card {
-    width: 237px;
+  .testimonials__card {
+    width: 95%;
   }
-  .discover__container {
+  .testimonials__container {
     width: 700px;
+    padding: 0.5rem;
   }
-  .discover__data {
+  .testimonials__data {
     left: 1.5rem;
     bottom: 2rem;
   }
-  .discover__title {
+  .testimonials__title {
     font-size: var(--h2-font-size);
   }
   .experience__content {

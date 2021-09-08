@@ -44,8 +44,8 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*==================== SWIPER DISCOVER ====================*/
-let swiper = new Swiper(".discover__container",
+/*==================== SWIPER testimonials ====================*/
+let swiper = new Swiper(".testimonials__container",
  {
     effect: "coverflow",
     grabCursor: true,
@@ -133,7 +133,7 @@ const sr = ScrollReveal({
 
 
 // sr.reveal(`.home__data, .home__social-link, .home__info,
-//            .discover__container,
+//            .testimonials__container,
 //            .experience__data, .experience__overlay,
 //            .place__card,
 //            .sponsor__content,
