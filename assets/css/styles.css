@@ -1081,7 +1081,7 @@ input, textarea {
 .contact__bg{
   background-color: var(--first-color-second);
   height: 650px;
-  padding: 2.5rem 0;
+  padding: 2.5rem 0;  
 }
 
 .contact__title, 
