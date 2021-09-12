@@ -145,7 +145,7 @@ video {
 }
 
 button,
-input {
+input, textarea {
   border: none;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -155,7 +155,7 @@ button {
   cursor: pointer;
 }
 
-input {
+input, textarea {
   outline: none;
 }
 
@@ -603,13 +603,17 @@ input {
 }
 
 .place__container {
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(1, max-content);
   justify-content: center;
 }
 
 .place__card {
   position: relative;
   overflow: var(--img-hidden);
+  border-radius: 10px;
+  width: 20rem;
+  box-shadow: rgba(14, 55, 63, 0.15) 0 3px 8px 0;
+ 
 }
 
 .place__card:hover .place__img {
@@ -675,7 +679,7 @@ input {
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
   background-color: var(--first-color-second);
-  height: 500px;
+  height: 340px;
   padding: 2.5rem 0;
 }
 
@@ -1073,4 +1077,35 @@ input {
   .home__container, .home__img {
     height: 640px;
   }
+}
+.contact__bg{
+  background-color: var(--first-color-second);
+  height: 650px;
+  padding: 2.5rem 0;
+}
+
+.contact__title, 
+.contact__description {
+  color: var(--white-color);
+}
+
+.contact__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+}
+.contact__form{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.contact__input, .contact__textarea{
+  width: 70vw;
+  padding: 1rem .5rem;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  margin: 0.5rem;
+
+}
+.contact__input::placeholder, .contact__textarea::placeholder {
+  color: var(--text-color);
 }
