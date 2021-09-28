@@ -208,7 +208,7 @@ input {
 
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 
 /*=============== HEADER ===============*/
@@ -436,7 +436,7 @@ input {
 }
 
 .about__container {
-  row-gap: 2.5rem;
+  row-gap: 3.5rem;
 }
 
 .about__description {
@@ -668,14 +668,14 @@ input {
   padding: .75rem 1rem;
 }
 
-/*=============== SUBSCRIBE ===============*/
-.subscribe__bg {
+/*=============== SUBSCRIBE & CONTACT ===============*/
+.subscribe__bg, .contact__bg {
   background-color: var(--first-color-second);
   padding: 2.5rem 0;
 }
 
 .subscribe__title, 
-.subscribe__description {
+.subscribe__description, .contact__title {
   color: var(--white-color);
 }
 
@@ -691,14 +691,33 @@ input {
   justify-content: space-between;
 }
 
-.subscribe__input {
-  width: 70%;
+.subscribe__input, .contact__input {
+  width: 90%;
   padding-right: .5rem;
   background-color: var(--input-color);
   color: var(--text-color);
 }
+.contact__form__div{
+  display: block;
+  text-align: center;
+  margin-left: 5%;
 
-.subscribe__input::placeholder {
+}
+.contact__form{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+}
+.contact__input{
+ padding: 1.5rem .5rem;
+ margin: .5rem;
+}
+
+.subscribe__input::placeholder, .contact__input::placeholder {
+  font-family: var(--body-font);
+  font-size: var(--font-medium);
   color: var(--text-color);
 }
 
@@ -967,17 +986,32 @@ input {
   .experience__overlay:nth-child(2) {
     width: 160px;
   }
-  .subscribe__bg {
+  .subscribe__bg, .contact__bg {
     background: none;
     padding: 0;
   }
-  .subscribe__container {
+  .subscribe__container, .contact__container {
     background-color: var(--first-color-second);
     padding: 3.5rem 0;
   }
-  .subscribe__input {
+  .subscribe__input, .contact__input {
     padding: 0 .5rem;
   }
+  .contact__form__div{
+    display: block;
+    text-align: center;
+  }
+  .contact__form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+  }
+  .contact__input{
+    padding: 1.5rem .5rem;
+    margin: .5rem;
+   }
   .footer__rights {
     flex-direction: row;
     justify-content: space-between;

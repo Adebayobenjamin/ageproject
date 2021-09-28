@@ -2,6 +2,39 @@
 setTimeout(function(){
     document.querySelector(".preloader_div").remove();
     document.querySelector(".main-body").style.display = "block";
+
+    owl();
+    /*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2800,
+    // reset: true,
+})
+
+
+sr.reveal(`.home__data, .home__social-link, .home__info,
+           .discover__container,
+           .experience__data, .experience__overlay,
+           .place__card,
+           .sponsor__content,
+           .footer__data, .footer__rights`,{
+    origin: 'top',
+    interval: 100,
+})
+
+sr.reveal(`.about__data, 
+           .video__description,
+           .subscribe__description`,{
+    origin: 'left',
+})
+
+sr.reveal(`.about__img-overlay, 
+           .video__content,
+           .subscribe__form`,{
+    origin: 'right',
+    interval: 100,
+})
+
 }, 3000)
 
 /*==================== SHOW MENU ====================*/
@@ -63,37 +96,37 @@ let swiper = new Swiper(".discover__container",
 },
 )
 
-/*==================== VIDEO ====================*/
-const videoFile = document.getElementById('video-file'),
-      videoButton = document.getElementById('video-button'),
-      videoIcon = document.getElementById('video-icon')
+// /*==================== VIDEO ====================*/
+// const videoFile = document.getElementById('video-file'),
+//       videoButton = document.getElementById('video-button'),
+//       videoIcon = document.getElementById('video-icon')
 
-function playPause(){ 
-    if (videoFile.paused){
-        // Play video
-        videoFile.play()
-        // We change the icon
-        videoIcon.classList.add('ri-pause-line')
-        videoIcon.classList.remove('ri-play-line')
-    }
-    else {
-        // Pause video
-        videoFile.pause(); 
-        // We change the icon
-        videoIcon.classList.remove('ri-pause-line')
-        videoIcon.classList.add('ri-play-line')
+// function playPause(){ 
+//     if (videoFile.paused){
+//         // Play video
+//         videoFile.play()
+//         // We change the icon
+//         videoIcon.classList.add('ri-pause-line')
+//         videoIcon.classList.remove('ri-play-line')
+//     }
+//     else {
+//         // Pause video
+//         videoFile.pause(); 
+//         // We change the icon
+//         videoIcon.classList.remove('ri-pause-line')
+//         videoIcon.classList.add('ri-play-line')
 
-    }
-}
-videoButton.addEventListener('click', playPause)
+//     }
+// }
+// videoButton.addEventListener('click', playPause)
 
-function finalVideo(){
-    // Video ends, icon change
-    videoIcon.classList.remove('ri-pause-line')
-    videoIcon.classList.add('ri-play-line')
-}
-// ended, when the video ends
-videoFile.addEventListener('ended', finalVideo)
+// function finalVideo(){
+//     // Video ends, icon change
+//     videoIcon.classList.remove('ri-pause-line')
+//     videoIcon.classList.add('ri-play-line')
+// }
+// // ended, when the video ends
+// videoFile.addEventListener('ended', finalVideo)
 
 
 /*==================== SHOW SCROLL UP ====================*/ 
@@ -124,36 +157,6 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2800,
-    // reset: true,
-})
-
-
-// sr.reveal(`.home__data, .home__social-link, .home__info,
-//            .discover__container,
-//            .experience__data, .experience__overlay,
-//            .place__card,
-//            .sponsor__content,
-//            .footer__data, .footer__rights`,{
-//     origin: 'top',
-//     interval: 100,
-// })
-
-sr.reveal(`.about__data, 
-           .video__description,
-           .subscribe__description`,{
-    origin: 'left',
-})
-
-sr.reveal(`.about__img-overlay, 
-           .video__content,
-           .subscribe__form`,{
-    origin: 'right',
-    interval: 100,
-})
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
