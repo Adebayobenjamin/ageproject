@@ -3,7 +3,6 @@ setTimeout(function(){
     document.querySelector(".preloader_div").remove();
     document.querySelector(".main-body").style.display = "block";
 
-    owl();
     /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
     distance: '60px',
