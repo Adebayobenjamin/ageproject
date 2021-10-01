@@ -150,6 +150,11 @@ input {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
+textarea{
+  border: none;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
 
 button {
   cursor: pointer;
@@ -235,6 +240,12 @@ input {
 
 .nav__logo {
   font-weight: var(--font-semi-bold);
+}
+.nav__logo img {
+  width: 8rem;
+  margin-top: 1rem;
+  margin-left: -1rem;
+
 }
 
 .nav__toggle {
@@ -400,6 +411,11 @@ input {
 .home__info-img:hover {
   transform: var(--img-scale);
 }
+.home__div{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+
+}
 
 /*=============== BUTTONS ===============*/
 .button {
@@ -441,6 +457,12 @@ input {
 
 .about__description {
   margin-bottom: var(--mb-2);
+  text-align: left;
+}
+.about__li {
+  text-align: left;
+ display: block;
+ margin-bottom: 1rem;
 }
 
 .about__img {
@@ -723,18 +745,20 @@ input {
 
 /*=============== SPONSORS ===============*/
 .sponsor__container {
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+ display: flex;
+ justify-content: center;
+ align-items: center;
   justify-items: center;
   row-gap: 3.5rem;
 }
 
 .sponsor__content:hover .sponsor__img {
-  filter: invert(0.5);
+  filter: invert(0.1);
 }
 
 .sponsor__img {
-  width: 90px;
-  filter: invert(0.7);
+  width: 100px;
+  height: 100px;
   transition: var(--img-transition);
 }
 
@@ -831,6 +855,22 @@ input {
 /* Show scroll */
 .show-scroll {
   bottom: 5rem;
+}
+.whatsapp{
+  background-color: transparent;
+  width: 3.2rem;
+  position: fixed;
+  right: .3rem;
+  bottom: 130px;
+  padding: .5rem;
+  display: none;
+  opacity: .9;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+
+}
+.whatsapp:hover{
+  opacity: 1;
 }
 
 /*=============== SCROLL BAR ===============*/
