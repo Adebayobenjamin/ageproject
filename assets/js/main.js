@@ -34,6 +34,11 @@ sr.reveal(`.about__img-overlay,
     interval: 100,
 })
 
+sr.reveal(`.s-box`,{
+    origin: 'bottom',
+    interval: 100,
+})
+
 }, 3000)
 
 /*==================== SHOW MENU ====================*/
@@ -198,4 +203,52 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+const submitContactForm = (fullname, email, message) => {
+    const fullnameError = document.querySelector(".error.fullname")
+    const emailError = document.querySelector(".error.email")
+    const messageError = document.querySelector(".error.message")
+    const successMessage = document.querySelector(".success__message")
+
+    fullnameError.innerHTML = emailError.innerHTML = messageError.innerHTML = "";
+    if(!fullname) fullnameError.innerHTML = "please fullname is required";
+    
+    else if(!email) emailError.innerHTML = "please email is required";
+
+    else if (!message)  messageError.innerHTML = "please enter your message";
+
+    else{
+        successMessage.innerHTML = "Thank you! We will get in touch very soon"
+    }
+
+}
+
+const contactForm = document.querySelector('.contact__form')
+
+contactForm.addEventListener("submit", (e)=> {
+    e.preventDefault();
+
+    const fullname = contactForm["fullname"].value;
+    const email = contactForm["email"].value;
+    const message = contactForm["message"].value;
+    
+    submitContactForm(fullname, email, message);
+});
+
+const submitSubscribeForm = (email) => {
+    const emailError = document.querySelector(".error.subscribe__email");
+    const successMessage = document.querySelector(".subscribe__message")
+    emailError.innerHTML = successMessage.innerHTML = ""
+    if(!email) emailError.innerHTML = "please enter your email"
+    else { 
+            successMessage.innerHTML = "Thank you for Subscribing!"
+    }
+}
+
+const subscribeForm = document.querySelector(".subscribe__form");
+subscribeForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = subscribeForm['email'].value;
+    submitSubscribeForm(email);
 })
